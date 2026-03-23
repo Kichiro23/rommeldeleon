@@ -59,8 +59,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:64px;display:flex;al
 .mmenu a{font-family:var(--fm);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:.65rem 1rem;transition:var(--tr)}
 .mmenu a:hover,.mmenu a.active{color:var(--navy);background:var(--bg2)}
 /* PAGES */
-.page{display:none;min-height:100vh;animation:pf .45s cubic-bezier(.4,0,.2,1) both}
-.page.active{display:block}
+.page{display:none !important;min-height:100vh;animation:pf .45s cubic-bezier(.4,0,.2,1) both}
+.page.active{display:block !important}
+#home.active{display:grid !important;grid-template-columns:1fr 400px}
 @keyframes pf{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 .rv{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
 .rv.vis{opacity:1;transform:none}
@@ -541,11 +542,13 @@ tbtn.addEventListener("click",()=>{
 const ham=document.getElementById("ham"),mmenu=document.getElementById("mmenu");
 ham.addEventListener("click",()=>mmenu.classList.toggle("open"));
 function mc(){mmenu.classList.remove("open")}
+const pageTitles={home:"Rommel Andrei De Leon | Computer Engineer",about:"About | Rommel Andrei De Leon",services:"Services | Rommel Andrei De Leon",education:"Education | Rommel Andrei De Leon",tools:"Tools | Rommel Andrei De Leon",projects:"Projects | Rommel Andrei De Leon",contact:"Contact | Rommel Andrei De Leon"};
 function sp(id){
   document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
   ["nn-","mn-"].forEach(pre=>{document.querySelectorAll("[id^='"+pre+"']").forEach(a=>a.classList.remove("active"))});
   document.getElementById(id).classList.add("active");
   ["nn-"+id,"mn-"+id].forEach(nid=>{const n=document.getElementById(nid);if(n)n.classList.add("active")});
+  document.title=pageTitles[id]||"Rommel Andrei De Leon";
   window.scrollTo(0,0);
   if(id==="home")initC();
   setTimeout(rv,80);
