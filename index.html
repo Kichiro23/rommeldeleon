@@ -70,8 +70,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:800;height:60px;display:flex;ali
 .mnu a:hover,.mnu a.on{color:var(--cyan);border-left-color:var(--cyan);background:var(--cyan-glow)}
 
 /* PAGES */
-.pg{display:none;min-height:100vh;animation:fin .4s ease both;position:relative;z-index:2}
-.pg.on{display:block}
+.pg{display:none !important;min-height:100vh;animation:fin .4s ease both;position:relative;z-index:2}
+.pg.on{display:block !important}
 @keyframes fin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .rv.go{opacity:1;transform:none}
@@ -79,7 +79,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:800;height:60px;display:flex;ali
 
 /* ========== HOME ========== */
 #HOME{min-height:100vh;position:relative;overflow:hidden;padding:6rem 2rem 4rem}
-#HOME.on{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+#HOME.on{display:flex !important;flex-direction:column;align-items:center;justify-content:center;text-align:center}
 #bgc{position:absolute;inset:0;z-index:0}
 .hero{position:relative;z-index:2;max-width:760px;width:100%}
 .htag{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--fm);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green);border:1px solid rgba(0,255,136,.2);padding:.32rem 1rem;background:rgba(0,255,136,.05);margin-bottom:2rem;animation:fin .5s ease both}
