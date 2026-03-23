@@ -66,7 +66,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:64px;display:flex;al
 .rv.vis{opacity:1;transform:none}
 .d1{transition-delay:.09s}.d2{transition-delay:.18s}.d3{transition-delay:.27s}.d4{transition-delay:.36s}
 /* HOME */
-#home{min-height:100vh;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 400px}
+#home{min-height:100vh;position:relative;overflow:hidden}
+#home.active{display:grid;grid-template-columns:1fr 400px}
 #bgc{position:absolute;inset:0;z-index:0}
 .hleft{padding:9.5rem 4rem 4rem;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2;border-right:1px solid var(--border)}
 .hright{position:relative;z-index:2;background:var(--surface);display:flex;flex-direction:column}
@@ -475,7 +476,7 @@ footer{background:var(--navy);padding:1.8rem 3.5rem;display:flex;align-items:cen
         <p class="cpitch rv">Whether you need <strong>video content produced</strong>, a brand's <strong>social media handled</strong>, <strong>IT support</strong> on-call, or a <strong>full creative and technical package</strong> — available for part-time remote work, project-based engagements, and async collaboration.</p>
         <div class="ap2 rv d1"><div class="adot"></div>Currently available · 10–20 hrs/week</div>
         <div class="clinks rv d2">
-          <a href="mailto:rommeld216@gmail.com" class="cl"><div class="clic">✉</div><div class="cinfo"><div class="clbl">Email</div><div class="cval">rommeld216@gmail.com</div></div><div class="carr">→</div></a>
+          <a href="/cdn-cgi/l/email-protection#c3b1acaeaea6afa7f1f2f583a4aea2aaafeda0acae" class="cl"><div class="clic">✉</div><div class="cinfo"><div class="clbl">Email</div><div class="cval"><span class="__cf_email__" data-cfemail="fe8c9193939b929acccfc8be99939f9792d09d9193">[email&#160;protected]</span></div></div><div class="carr">→</div></a>
           <a href="tel:+639627905910" class="cl"><div class="clic">☎</div><div class="cinfo"><div class="clbl">Phone / WhatsApp</div><div class="cval">+63 962 790 5910</div></div><div class="carr">→</div></a>
           <a href="https://www.linkedin.com/in/rommel-andrei-de-leon-36ba8b291/" target="_blank" class="cl"><div class="clic">in</div><div class="cinfo"><div class="clbl">LinkedIn</div><div class="cval">rommel-andrei-de-leon</div></div><div class="carr">↗</div></a>
           <a href="https://www.facebook.com/andrei.deleon23" target="_blank" class="cl"><div class="clic">fb</div><div class="cinfo"><div class="clbl">Facebook</div><div class="cval">andrei.deleon23</div></div><div class="carr">↗</div></a>
@@ -510,7 +511,7 @@ footer{background:var(--navy);padding:1.8rem 3.5rem;display:flex;align-items:cen
 </div>
 
 <footer>
-  <div class="ft"><span>Rommel Andrei De Leon</span> · BS Computer Engineering · <span>rommeld216@gmail.com</span></div>
+  <div class="ft"><span>Rommel Andrei De Leon</span> · BS Computer Engineering · <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="31435e5c5c545d5503000771565c50585d1f525e5c">[email&#160;protected]</a></span></div>
   <div class="fsoc">
     <a href="https://www.linkedin.com/in/rommel-andrei-de-leon-36ba8b291/" target="_blank" class="fsl" title="LinkedIn">in</a>
     <a href="https://www.facebook.com/andrei.deleon23" target="_blank" class="fsl" title="Facebook">fb</a>
@@ -520,7 +521,7 @@ footer{background:var(--navy);padding:1.8rem 3.5rem;display:flex;align-items:cen
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const cur=document.getElementById("cursor"),cring=document.getElementById("cring");
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener("mousemove",e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+"px";cur.style.top=my+"px"});
@@ -590,13 +591,4 @@ initC();
 function bars(){document.querySelectorAll(".pb").forEach(b=>b.classList.add("go"))}
 document.addEventListener("mousemove",e=>{
   document.querySelectorAll(".page.active .sc").forEach(card=>{
-    const r=card.getBoundingClientRect();
-    if(e.clientX>r.left&&e.clientX<r.right&&e.clientY>r.top&&e.clientY<r.bottom){
-      const x=(e.clientY-r.top-r.height/2)/r.height*4,y=(e.clientX-r.left-r.width/2)/r.width*-4;
-      card.style.transform="perspective(700px) rotateX("+x+"deg) rotateY("+y+"deg) translateY(-3px)";
-    }else{card.style.transform=""}
-  });
-});
-</script>
-</body>
-</html>
+    const r=card.getBound
