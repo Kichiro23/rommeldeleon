@@ -78,7 +78,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:800;height:60px;display:flex;ali
 .r1{transition-delay:.08s}.r2{transition-delay:.16s}.r3{transition-delay:.24s}.r4{transition-delay:.32s}
 
 /* ========== HOME ========== */
-#HOME{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:6rem 2rem 4rem}
+#HOME{min-height:100vh;position:relative;overflow:hidden;padding:6rem 2rem 4rem}
+#HOME.on{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
 #bgc{position:absolute;inset:0;z-index:0}
 .hero{position:relative;z-index:2;max-width:760px;width:100%}
 .htag{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--fm);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green);border:1px solid rgba(0,255,136,.2);padding:.32rem 1rem;background:rgba(0,255,136,.05);margin-bottom:2rem;animation:fin .5s ease both}
@@ -506,7 +507,7 @@ footer{background:var(--bg2);padding:1.6rem 2.5rem;display:flex;align-items:cent
         <p class="cpitch rv">Whether you need <strong>video content produced</strong>, a brand's <strong>social media handled</strong>, <strong>IT support</strong> on-call, or a <strong>full creative and technical package</strong> — available for part-time remote work, project-based, and async collaboration.</p>
         <div class="avl rv r1"><div class="avd"></div>Currently available · 10–20 hrs/week</div>
         <div class="clinks rv r2">
-          <a href="mailto:rommeld216@gmail.com" class="cli"><div class="clic">✉</div><div class="cinf"><div class="clbl">Email</div><div class="cval">rommeld216@gmail.com</div></div><div class="carr">→</div></a>
+          <a href="/cdn-cgi/l/email-protection#12607d7f7f777e7620232452757f737b7e3c717d7f" class="cli"><div class="clic">✉</div><div class="cinf"><div class="clbl">Email</div><div class="cval"><span class="__cf_email__" data-cfemail="deacb1b3b3bbb2baecefe89eb9b3bfb7b2f0bdb1b3">[email&#160;protected]</span></div></div><div class="carr">→</div></a>
           <a href="tel:+639627905910" class="cli"><div class="clic">☎</div><div class="cinf"><div class="clbl">Phone / WhatsApp</div><div class="cval">+63 962 790 5910</div></div><div class="carr">→</div></a>
           <a href="https://www.linkedin.com/in/rommel-andrei-de-leon-36ba8b291/" target="_blank" class="cli"><div class="clic">in</div><div class="cinf"><div class="clbl">LinkedIn</div><div class="cval">rommel-andrei-de-leon</div></div><div class="carr">↗</div></a>
           <a href="https://www.facebook.com/andrei.deleon23" target="_blank" class="cli"><div class="clic">fb</div><div class="cinf"><div class="clbl">Facebook</div><div class="cval">andrei.deleon23</div></div><div class="carr">↗</div></a>
@@ -541,7 +542,7 @@ footer{background:var(--bg2);padding:1.6rem 2.5rem;display:flex;align-items:cent
 </div>
 
 <footer>
-  <div class="ft"><span>Rommel Andrei De Leon</span> · BS Computer Engineering · <span>rommeld216@gmail.com</span></div>
+  <div class="ft"><span>Rommel Andrei De Leon</span> · BS Computer Engineering · <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e3918c8e8e868f87d1d2d5a3848e828a8fcd808c8e">[email&#160;protected]</a></span></div>
   <div class="fsoc">
     <a href="https://www.linkedin.com/in/rommel-andrei-de-leon-36ba8b291/" target="_blank" class="fsl">in</a>
     <a href="https://www.facebook.com/andrei.deleon23" target="_blank" class="fsl">fb</a>
@@ -551,7 +552,7 @@ footer{background:var(--bg2);padding:1.6rem 2.5rem;display:flex;align-items:cent
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Cursor
 const cur=document.getElementById("cur"),cring=document.getElementById("cring");
 let mx=0,my=0,rx=0,ry=0;
@@ -643,13 +644,4 @@ initCanvas();
 // Service card tilt
 document.addEventListener("mousemove",e=>{
   document.querySelectorAll(".pg.on .sc").forEach(card=>{
-    const r=card.getBoundingClientRect();
-    if(e.clientX>r.left&&e.clientX<r.right&&e.clientY>r.top&&e.clientY<r.bottom){
-      const x=(e.clientY-r.top-r.height/2)/r.height*4,y=(e.clientX-r.left-r.width/2)/r.width*-4;
-      card.style.transform="perspective(700px) rotateX("+x+"deg) rotateY("+y+"deg)";
-    }else card.style.transform="";
-  });
-});
-</script>
-</body>
-</html>
+    cons
